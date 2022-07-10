@@ -1,0 +1,19 @@
+#FrontEnd Deployment
+kubectl apply -f frontend-deployment.yaml
+kubectl apply -f frontend-service.yaml
+
+#Checking without backend
+Browser URL: http://localhost:32000/ 
+
+
+#BackEnd Deployment
+kubectl apply -f backend-deployment.yaml
+kubectl apply -f backend-service.yaml
+
+
+Browser URL: http://localhost:32000/    >> Print msg hello
+
+
+#Delete Deployment and Service
+kubectl delete services frontend backend
+kubectl delete deployment frontend backend
